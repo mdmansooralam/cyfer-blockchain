@@ -1,0 +1,17 @@
+.product{
+
+    .card-image{
+        height: 100%;
+        aspect-ratio: 1/1;
+
+        img{
+            max-width: 60%;
+            @media (min-width:1400px){
+                max-width: 100%;
+            }
+        }
+    }
+
+
+    
+}

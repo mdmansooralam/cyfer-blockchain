@@ -1,0 +1,204 @@
+@font-face {
+  font-family: 'ClashDisplay-variable';
+  src: url('../fonts/ClashDisplay-Variable.woff2') format('woff2'),
+       url('../fonts/ClashDisplay-Variable.woff') format('woff'),
+       url('../fonts/ClashDisplay-Variable.ttf') format('truetype');
+  font-weight: 200 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+$grid-columns: 14;
+$enable-cssgrid:true;
+
+$enable-negative-margins:true;
+$font-family-base: "Archivo", sans-serif;
+$font-clash-display : 'ClashDisplay-variable', sans-serif;
+
+$font-size-base : 1rem;
+
+$h1-font-size:                $font-size-base * 4.25 ;
+$h2-font-size:                $font-size-base * 3.75 ;
+$h3-font-size:                $font-size-base * 1.875 ;
+$h4-font-size:                $font-size-base * 1.75 ;
+$h5-font-size:                $font-size-base * 1.25 ;
+$h6-font-size:                $font-size-base ;
+$h7-font-size:                $font-size-base * 0.875;
+
+$custom-font-sizes: ( 7: $h7-font-size );
+
+// colors
+$dark:#11111B;
+$accent:#B95DFE;
+
+
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  12: $spacer * 0.75,
+  20: $spacer * 1.25,
+  28: $spacer * 1.75,
+  38: $spacer * 2.375,
+  32: $spacer * 2,
+  35: $spacer * 2.1875,
+  40: $spacer * 2.5,
+  55: $spacer * 3.4375,
+  60: $spacer * 3.75,
+  64: $spacer * 4,
+  76: $spacer * 4.75,
+  82: $spacer * 5.125,
+  88: $spacer * 5.5,  
+  96: $spacer * 6,
+  100: $spacer * 6.25,
+  106: $spacer * 6.625,
+  116: $spacer * 7.25,
+  124: $spacer * 7.75,
+  132: $spacer * 8.25,
+  148: $spacer * 9.25,
+  189: $spacer * 11.8125,
+  200: $spacer * 12.5,
+  264: $spacer * 16.5,
+  272: $spacer * 17,
+  280: $spacer * 17.5,
+);
+
+$zindex-levels: (
+  n1: -1,
+  0: 0,
+  1: 1,
+  2: 2,
+  3: 3
+);
+
+$body-bg: $dark;
+$body-color: white;
+$paragraph-margin-bottom: 0;
+
+
+$custom-grid-breakpoints: (xxxl: 1920px);
+$custom-container-max-widths: (xxxl:1720px);
+
+
+@import '../node_modules/bootstrap/scss/functions';
+@import '../node_modules/bootstrap/scss/variables';
+@import '../node_modules/bootstrap/scss/mixins';
+@import '../node_modules/bootstrap/scss/nav';
+
+$grid-breakpoints : map-merge($map1: $grid-breakpoints, $map2: $custom-grid-breakpoints);
+$container-max-widths : map-merge($map1: $container-max-widths, $map2: $custom-container-max-widths);
+$font-sizes : map-merge($map1: $font-sizes, $map2: $custom-font-sizes);
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+@import './hero-section';
+@import './header';
+@import './fact-section';
+@import './discover-section';
+@import './product-section';
+@import './services-section';
+@import './footer';
+@import './contact-section';
+@import './resources-section';
+@import './credentials-section';
+
+.bg-nav{
+  backdrop-filter: blur(10px);
+  background-color: #11111bb8  !important;
+  background-size: 200%;
+  background-position: 500px;
+}
+
+.font-primary{
+    font-family: 'ClashDisplay-variable';
+}
+
+.bottom-25{bottom: 25%;}
+
+.custom-button{
+  text-decoration: none;
+  color: white;
+  position:relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width:1920px){
+    font-size: 1.25rem;
+    svg{
+      width: 248px;
+    }
+  }
+}
+
+.text-clash{
+  font-family :$font-clash-display;
+}
+
+.text-gradient, h1, h2, h3, h4, h5, h6{
+  background: -webkit-linear-gradient(0deg,  #fff, #c9b0fb);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: $font-clash-display;
+}
+
+.blur-bg{
+  @media (max-width:1200px){
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+  }
+}
+
+.blur-bg-clip{
+  @media (max-width:575px){
+    background-color:rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    $corner:30px;
+    clip-path: polygon(
+      $corner 0,
+      100% 0%,
+      100% calc(100% - $corner),
+      calc(100% - $corner) 100%,
+      0% 100%,
+      0% $corner
+    );
+  }
+}
+
+.d-grid{
+  display: grid;
+}
+
+.grid-area-1\/1{
+  grid-area: 1 / 1;
+}
+
+.gd-border-text{
+  position: relative;
+  background:linear-gradient(90deg, #AC82FF, #ffffff);
+  background-clip: text;
+  color: transparent;
+  
+  &::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50px;
+    border: 2px solid transparent;
+    background: linear-gradient(90deg, #B95DFE, #E6C6FF) border-box;
+    mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+    mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+}

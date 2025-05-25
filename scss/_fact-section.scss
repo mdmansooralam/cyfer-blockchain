@@ -1,0 +1,53 @@
+.fact{
+
+    .fact-card-group > div:last-of-type .fact-card{
+        &::after{
+            display: none;
+            @media (min-width: 768px){
+                display: block;
+            }
+            @media (min-width:1200px){
+                display: none;
+            }
+        }
+    }
+    .fact-card{
+            &::after{
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: 0;
+                width: 80px;
+                height: 2px;
+                background: linear-gradient(to left, #B95DFE, #ffffff);
+
+                @media (min-width:1200px){
+                    bottom: 0;
+                    width: 2px;
+                    height: 100%;
+                    background: linear-gradient(to bottom, #B95DFE, #ffffff);
+                    right: -2rem;
+                }
+                
+            }
+
+    }
+
+    @media (min-width:1400px){
+        .card-text{
+            font-size: 1.25rem !important;
+        }
+        .card-title{
+            font-size: 3rem !important;
+        }
+    }
+
+    @media (min-width:1920px){
+        .card-text{
+            font-size: 3.75rem !important;
+        }
+        .card-text{
+            font-size: 1.8rem !important;
+        }
+    }
+}

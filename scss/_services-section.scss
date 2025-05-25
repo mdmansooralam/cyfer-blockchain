@@ -1,0 +1,57 @@
+.services{
+
+    .service-card{
+        background: url('/images/service-card-bg.png');
+        background-size:contain;
+        background: none;
+        &:hover{
+            background:local
+        }
+    }
+
+    .bg-image{
+        img{
+            @media (max-width:1200px){
+                width: 10%;
+            }
+            @media (max-width:768px){
+                width: 30%;
+                // translate: 0 -100%;
+            }
+        }
+    }
+    
+
+    .service-card-content{
+        p{font-size: 12px;}
+    }
+    @media (max-width:1200px){
+        .service-card-content{
+            img{
+                width: auto;
+            }
+            h3{
+                font-size: 30px;
+            }
+            p{
+                font-size: 1rem;
+            }
+        }
+    }
+
+
+    @media (min-width:1920px){
+
+        .service-card-content{
+            img{
+                width: auto;
+            }
+            h3{
+                font-size: 30px;
+            }
+            p{
+                font-size: 1rem;
+            }
+        }
+    }
+}

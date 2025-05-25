@@ -1,0 +1,10 @@
+.hero{
+    @media (min-width:1920px){
+        p{
+            font-size: 1.25rem !important;
+        }
+        h1{
+            font-size: 4.25rem !important;
+        }
+    }
+}
