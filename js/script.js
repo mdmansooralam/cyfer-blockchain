@@ -1,7 +1,8 @@
-const navbar = document.querySelector('.navbar')
-const logo = document.querySelector('.logo')
-
+const header = document.querySelector('header')
 window.addEventListener('scroll', ()=>{
-//     navbar.classList.remove('mt-xl-88')
-//     navbar.classList.add('bg-primary')
+if(window.scrollY >= 80){
+    header.classList.add('js-toggle')
+}else{
+    header.classList.remove('js-toggle')
+}
 })

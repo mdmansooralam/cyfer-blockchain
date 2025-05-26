@@ -68,4 +68,18 @@ header{
             font-size: 1.25rem;
         }
     }
+
+    &.js-toggle{
+        nav{
+            backdrop-filter: blur(10px) !important;
+            background-color: #11111bb8 !important;
+            margin-top: 0 !important;
+        }
+        .navbar-brand{
+            img{
+                width: 200px;
+                translate: 0 0;
+            }
+    }
+    }
 }

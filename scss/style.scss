@@ -109,8 +109,8 @@ $font-sizes : map-merge($map1: $font-sizes, $map2: $custom-font-sizes);
 .bg-nav{
   backdrop-filter: blur(10px);
   background-color: #11111bb8  !important;
-  background-size: 200%;
-  background-position: 500px;
+  // background-size: 200%;
+  // background-position: 500px;
 }
 
 .font-primary{
