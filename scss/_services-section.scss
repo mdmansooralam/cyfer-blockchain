@@ -1,11 +1,14 @@
 .services{
 
     .service-card{
-        background: url('/images/service-card-bg.png');
-        background-size:contain;
-        background: none;
+        transition: 0.3s linear;
+        cursor: pointer;
         &:hover{
-            background:local
+            translate: 0 -10px;
+            path{fill-opacity: 0.5;}
+        }
+        path{
+            transition: 0.3s linear;
         }
     }
 
