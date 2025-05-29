@@ -1,0 +1,33 @@
+.contact{
+
+    $corner:1rem;
+    input[type='text'], textarea{
+        color: black !important;
+    }
+
+    .input-clip{
+        clip-path: polygon(
+            $corner 0%,
+            100% 0%,
+            100% calc(100% - $corner),
+            calc(100% - $corner) 100%,
+            0% 100%,
+            0% $corner
+        );
+    }
+
+    @media (min-width:1920px){
+        form{
+            p, label{
+
+                font-size: 1.25rem !important;
+            }
+        }
+    }
+    @media (min-width:1400px){
+        h2{
+            font-size: 3.75rem !important;
+        }
+
+    }
+}

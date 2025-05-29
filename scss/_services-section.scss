@@ -1,0 +1,60 @@
+.services{
+
+    .service-card{
+        transition: 0.3s linear;
+        cursor: pointer;
+        &:hover{
+            translate: 0 -10px;
+            path{fill-opacity: 0.5;}
+        }
+        path{
+            transition: 0.3s linear;
+        }
+    }
+
+    .bg-image{
+        img{
+            @media (max-width:1200px){
+                width: 10%;
+            }
+            @media (max-width:768px){
+                width: 30%;
+                // translate: 0 -100%;
+            }
+        }
+    }
+    
+
+    .service-card-content{
+        p{font-size: 12px;}
+    }
+    @media (max-width:1200px){
+        .service-card-content{
+            img{
+                width: auto;
+            }
+            h3{
+                font-size: 30px;
+            }
+            p{
+                font-size: 1rem;
+            }
+        }
+    }
+
+
+    @media (min-width:1920px){
+
+        .service-card-content{
+            img{
+                width: auto;
+            }
+            h3{
+                font-size: 30px;
+            }
+            p{
+                font-size: 1rem;
+            }
+        }
+    }
+}

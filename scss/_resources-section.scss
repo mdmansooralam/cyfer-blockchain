@@ -1,0 +1,24 @@
+.our-resources{
+    .top-image{
+        padding: 1.5px;
+    }
+    .image-clip{
+        $img-corner:50px;
+        clip-path: polygon(
+            $img-corner 0%,
+            100% 0%,
+            100% 100%,
+            0% 100%,
+            0% $img-corner
+        );
+    }
+
+    @media (min-width:1920px){
+        .text-gradient{font-size: 2.5rem !important;}
+        .resource-card-text{
+            p{
+                font-size: 1.875rem !important;
+            }
+        }
+    }
+}
